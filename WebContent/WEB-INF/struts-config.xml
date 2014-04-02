@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+    <form-beans>
+    	<form-bean name="helloWorldForm" type="com.myer.demo.HelloWorldForm"/>
+    </form-beans>
+ 
+	<global-forwards>
+        <forward name="demo" path="/demo.do"/>
+        <forward name="demojson" path="/demojson.do"/>
+    </global-forwards>
+    
+    <action-mappings>
+        <action path="/demo" type="com.myer.action.TestActionClass" name="helloWorldForm">
+        	<forward name="success" path="/helloWorld.jsp" />
+        </action>    
+          <action path="/demojson" 
+           type="com.myer.action.JSONDataAction"  name="helloWorldForm">
+       	<forward name="success" path="/helloWorld.jsp" />
+      </action>
+    </action-mappings>
+
+
+</struts-config>
+

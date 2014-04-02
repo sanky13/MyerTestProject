@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.myer.imageresize.MyerImageResize
+Class-Path: org.apache.commons.io.jar CMYKDemo.jar
+
